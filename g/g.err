@@ -1,0 +1,8 @@
+>>> Warning 216 "g.c" Line 233(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "g.c" Line 233(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_putc)
+>>> Warning 216 "g.c" Line 233(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+>>> Warning 216 "g.c" Line 233(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC7_620)
+>>> Warning 216 "g.c" Line 233(1,2): Interrupts disabled during call to prevent re-entrancy:  (motor)
+      Memory usage:   ROM=45%      RAM=15% - 23%
+      0 Errors,  5 Warnings.
+Build Successful.

@@ -1,0 +1,97 @@
+[PROJECT]
+Target=g.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=g.c
+[g.c]
+Type=4
+[mru-list]
+1=g.c
+
+[defines]
+buildcount=94
+
+[Opened Files]
+1=..\rasha\rasha\r.c
+t1=125
+Count=1
+
+[ProjectLog]
+Days=3
+D1=27-12-2022
+D1_L=6
+D1_L1=[33919]Stopped Editing.
+D1_L2=[34310]Started Editing.
+D1_L3=[60797]Stopped Editing.
+TotalEdit=698
+TotalDebug=0
+D1_E=445
+D1_D=0
+D1_L4=[60797]Project Closed.
+D1_L5=[61183]Project Opened.
+D1_L6=[61193]Project Closed.
+D2=29-12-2022
+D2_L=26
+D2_L1=[71944]Project Opened.
+D2_L2=[72424]Started Editing.
+D2_L3=[73507]Stopped Editing.
+D2_L4=[73996]Started Editing.
+D2_L5=[74583]Stopped Editing.
+D2_L6=[74796]Started Editing.
+D2_L7=[76217]Stopped Editing.
+D2_L8=[76260]Started Editing.
+D2_L9=[76424]Stopped Editing.
+D2_E=124
+D2_D=0
+D2_L10=[76424]Project Closed.
+D2_L11=[76436]Project Opened.
+D2_L12=[76471]Started Editing.
+D2_L13=[77075]Stopped Editing.
+D2_L14=[78300]Started Editing.
+D2_L15=[78347]Stopped Editing.
+D2_L16=[78347]Project Closed.
+D2_L17=[78407]Project Opened.
+D2_L18=[78507]Started Editing.
+D2_L19=[80542]Stopped Editing.
+D2_L20=[81562]Started Editing.
+D2_L21=[82154]Stopped Editing.
+D2_L22=[82402]Project Closed.
+D2_L23=[82539]Project Opened.
+D2_L24=[82552]Started Editing.
+D2_L25=[85137]Stopped Editing.
+D2_L26=[85137]Project Closed.
+D3=30-12-2022
+D3_L=26
+D3_L1=[663]Project Opened.
+D3_L2=[1864]Started Editing.
+D3_L3=[4934]Stopped Editing.
+D3_L4=[4997]Started Editing.
+D3_L5=[5571]Stopped Editing.
+D3_L6=[7700]Started Editing.
+D3_L7=[8032]Stopped Editing.
+D3_L8=[8366]Started Editing.
+D3_L9=[8398]Stopped Editing.
+D3_E=129
+D3_D=0
+D3_L10=[8402]Project Closed.
+D3_L11=[8444]Project Opened.
+D3_L12=[8458]Started Editing.
+D3_L13=[10745]Stopped Editing.
+D3_L14=[10997]Started Editing.
+D3_L15=[11325]Stopped Editing.
+D3_L16=[11325]Project Closed.
+D3_L17=[62891]Project Opened.
+D3_L18=[62906]Started Editing.
+D3_L19=[63206]Stopped Editing.
+D3_L20=[64791]Started Editing.
+D3_L21=[67029]Stopped Editing.
+D3_L22=[67029]Project Closed.
+D3_L23=[67052]Project Opened.
+D3_L24=[67053]Project Closed.
+D3_L25=[67053]Project Opened.
+D3_L26=[67080]Project Closed.
+[Units]
+Count=1
+1=g (main)

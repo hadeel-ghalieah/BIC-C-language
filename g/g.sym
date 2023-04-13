@@ -1,0 +1,205 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C     @TRIS_C
+02D-02E @sprintf_string
+02F-038 z
+039-03D q
+03E     MAIN.t
+03F     MAIN.v
+040-049 MAIN.m
+04A     MAIN.b
+04B     MAIN.i
+04C     MAIN.v
+04D     MAIN.vv
+04E     MAIN.j
+04F     MAIN.v
+050     MAIN.j
+051     zz.j
+051     lcd_init.i
+051     qq.qt
+051     seg.m
+051     MAIN.@SCRATCH1
+052     qq.j
+052     @PSTRINGCN7_620.P1
+052-055 lcd_init.LCD_INIT_STRING
+052     zz.i
+052     @PRINTF_D_620.P1
+052     seg.@SCRATCH1
+052     MAIN.@SCRATCH2
+053     @PRINTF_D_620.P1
+053     zz.@SCRATCH1
+053     qq.@SCRATCH1
+053     MAIN.@SCRATCH3
+053     @PSTRINGCN7_620.@SCRATCH1
+054     @PSTRINGCN7_620.@SCRATCH2
+054     @PRINTF_D_620.@SCRATCH1
+055     @PSTRINGCN7_620.@SCRATCH3
+055     @PRINTF_D_620.@SCRATCH2
+056     lcd_init.@SCRATCH1
+056     @PSTRINGCN7_620.@SCRATCH4
+056     @PRINTF_D_620.@SCRATCH3
+057     @PRINTF_D_620.@SCRATCH4
+058     @DIV88.P1
+059     @DIV88.P1
+05A     @DIV88.@SCRATCH1
+063     motor.@SCRATCH1
+063     @PSTRINGC7_620.@SCRATCH1
+064     @PSTRINGC7_620.@SCRATCH2
+065     @PSTRINGC7_620.@SCRATCH3
+066     lcd_putc.c
+066     @PSTRINGC7_620.@SCRATCH4
+067     @delay_ms1.P1
+067     lcd_gotoxy.x
+068     lcd_gotoxy.y
+069     lcd_gotoxy.address
+06A     lcd_gotoxy.@SCRATCH1
+06B     lcd_send_byte.address
+06C     lcd_send_byte.n
+06D     lcd_read_byte.low
+06D     lcd_send_byte.@SCRATCH1
+06E     lcd_send_nibble.n
+06E     lcd_read_byte.high
+06F     lcd_read_nibble.n
+06F     lcd_read_byte.@SCRATCH1
+070     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+00004F  @const637.call
+00005A  @const642.call
+000065  lcd_gotoxy
+00018A  @delay_ms1
+00019E  lcd_putc
+000503  @PSTRINGC7_620
+000559  motor
+0005A2  ext_isr
+0005A8  @const656.call
+0005B2  @const657.call
+0005B9  @const666.call
+0005C3  @const667.call
+0005D0  @const668.call
+0005D8  @const669.call
+0005E6  @const670.call
+0005F6  @const672.call
+000605  @const673.call
+000613  @const674.call
+000618  @const675.call
+000624  @const676.call
+00062C  @const684.call
+000638  @const685.call
+000644  @const686.call
+00064A  @const687.call
+000655  @const689.call
+00065F  @const690.call
+000668  @const692.call
+000675  qq
+000688  @PSTRINGCN7_620
+0006EB  @DIV88
+000700  @PRINTF_D_620
+00076F  zz
+000782  click
+000800  lcd_init
+0008B0  lcd_send_byte
+0008B8  lcd_read_byte
+000904  lcd_read_nibble
+000997  lcd_send_nibble
+0009C9  seg
+000A1D  @cinit1
+000A1D  MAIN
+000A2B  @cinit2
+
+Project Directory:
+    C:\Users\safa\Desktop\g\
+
+Project Files:
+    g.c                                                     [30-ﬂ«‰Ê‰†«·√Ê·-22 03:08  CRC=269B3F1A]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h  [08-√Ì·Ê·-15 15:15  CRC=B168AC0E]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c      [19-√Ì·Ê·-13 16:38  CRC=D1A6378A]
+
+Source signature=7B505A3C
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=9D46
+
+Units:
+    g (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   g.xsym
+    Errors:      g.err
+    Ext Symbols: g.esym
+    INHX8:       g.hex
+    Symbols:     g.sym
+    List:        g.lst
+    Debug/COFF:  g.cof
+    Project:     g.ccspjt
+    Call Tree:   g.tre
+    Statistics:  g.STA

@@ -1,0 +1,236 @@
+#define lcd_rs_pin pin_d0
+#define lcd_rw_pin pin_d1
+#define lcd_enable_pin pin_d2
+#define lcd_data4 pin_d3
+#define lcd_data5 pin_d4
+#define lcd_data6 pin_d5
+#define lcd_data7 pin_d6
+#include <16f877a.h>
+//#device ADC=10
+#use delay (clock=20000000)
+#include<lcd.c>
+
+
+
+
+int click(){ 
+            output_high(pin_b3);
+            output_high(pin_b2);
+            output_low(pin_b1);
+            
+      if(!input_state(pin_b4))  return 1;
+      if(!input_state(pin_b5)) return 4;
+      if(!input_state(pin_b6))  return 7;
+      if(!input_state(pin_b7))  return 10;
+  
+            output_high(pin_b3);
+            output_low(pin_b2);
+            output_high(pin_b1);
+      if(!input_state(pin_b4))  return 2;
+      if(!input_state(pin_b5))  return 5;
+      if(!input_state(pin_b6))  return 8;
+      if(!input_state(pin_b7))  return 0;
+  
+            output_low(pin_b3);
+            output_high(pin_b2);
+            output_high(pin_b1);
+      if(!input_state(pin_b4))  return 3;
+      if(!input_state(pin_b5))  return 6;
+      if(!input_state(pin_b6))  return 9;
+      if(!input_state(pin_b7))  return 11;
+   
+}
+
+
+//void adcr(){         i=read_adc();
+                    // lcd_putc('\f');
+  void seg(int m){
+  
+                 output_low(pin_c2);
+                 output_low(pin_c3);
+                 output_low(pin_c4);
+                 output_low(pin_c5);
+                 if(m%2==1)output_high(pin_c2);
+                 if(m==2|| m==3|| m==6||m==7)output_high(pin_c3);
+                 if(m>3 && m<8)output_high(pin_c4);
+                 if(m>7)output_high(pin_c5);               
+  }
+  void motor(){  output_high(pin_e0);
+                 output_low(pin_e1);
+                 output_high(pin_e2);
+                 lcd_gotoxy(1,2);
+                 lcd_putc("    <<door opening>> ");
+                 delay_ms(2000);
+                 output_low(pin_e0);
+                 output_high(pin_e1);
+                 lcd_putc('\f');
+                 lcd_gotoxy(1,2);
+                 lcd_putc("    <<door closing>> ");
+                 delay_ms(2000);
+                  output_low(pin_e1);
+                  output_low(pin_e2);
+                 lcd_putc('\f');
+                 
+                 }
+#int_ext 
+void ext_isr(){
+   clear_interrupt(INT_EXT);
+    motor();}
+    
+   int z[]={1,0,1,0,1,0,1,0,0,1};
+   int q[]={1,1,1,0,0};
+   //}
+ int zz(){int j=10;for(int i=0; i<10; i++) {if(z[i]==1)j--;}  return j;}
+ int qq(){int qt=5; for(int j=0; j<5; j++){  if(q[j]==1)qt--;} return qt;}
+
+void main(){
+
+   int t=5-qq();
+  
+  ext_int_edge(H_TO_L);
+  clear_interrupt(INT_EXT); 
+  enable_interrupts(INT_EXT);  
+  enable_interrupts(GLOBAL);
+ 
+        set_tris_b(0xF1);
+       set_tris_C(0xff);
+       set_tris_e(0x00);output_e(0x00);
+       set_tris_d(0x00);output_d(0x00);
+      
+      port_b_pullups(true);
+      lcd_init();
+      
+  
+  //setup_adc(ADC_CLOCK_DIV_32);
+  //setup_adc_ports(AN0);
+  
+  lcd_gotoxy(1,1);
+  lcd_putc("Welcome to Harbor ");
+  
+ lcd_gotoxy(1,2);
+  printf(lcd_putc, "places : %1d ", 10);
+ lcd_putc("   button IN/EXIT ");
+
+while(TRUE)
+       {    
+
+       
+        if(!input(pin_c0)){ 
+                      if(zz()== 0){
+                                if(qq()==0){
+                                            lcd_gotoxy(1,1);
+                                            lcd_putc('\f');
+                                            lcd_putc("   sorry you can't enter ");
+                                            lcd_gotoxy(1,2);
+                                            lcd_putc("   full queue ");
+                                          }
+                                    else {  
+                                          lcd_gotoxy(1,1);
+                                          lcd_putc('\f');
+                                          lcd_putc("   you can enter to QUEUE ");
+                                          lcd_gotoxy(1,2);
+                                          lcd_putc("   press # to ENTER, * to EXIT");
+                                          int v=12;
+                                          while(true){v=click();
+                                                      if(v==10||v==11)break; }
+                                                
+                                          if(v==11){ lcd_gotoxy(1,1);
+                                          lcd_putc('\f');
+                                          q[t]=1; t++;
+                                          printf(lcd_putc,"  you are in queue num/ %1d /", t);
+                                          lcd_gotoxy(1,2);
+                                           printf(lcd_putc, "there are : %1d before you ", t-1);}
+                                           
+                                         if(v==10){ lcd_gotoxy(1,1);
+                                          lcd_putc('\f');
+                                          lcd_putc("good bye");
+                                          delay_ms(1000);
+                                          lcd_putc('\f');}
+                                          
+                                          
+                                          } } 
+                                          
+                                          
+                                else{  lcd_gotoxy(1,1); 
+                                              lcd_putc('\f');
+                                              printf(lcd_putc, "there are : %1d places ", zz());
+                                              lcd_gotoxy(1,2);
+                                              lcd_putc("press one of: ");
+                                              int m[]={22,22,22,22,22,22,22,22,22,22};
+                                              int b=0;
+                                      for(int i=0; i<10;i++)
+                                             if(z[i]==0){
+                                                    m[i]=i+1; lcd_gotoxy(15+b,2);
+                                                    printf(lcd_putc, "%d", i+1);
+                                                    b= b+2;}
+                                             int v=12,vv=0;
+                                             while(true){v=click();  if(v<10 && v>0)break;}
+                                               for(int j=0; j<10;j++)
+                                                     if(m[j]==v){  z[j]=1;
+                                                             motor();
+                                                              lcd_putc('\f');
+                                                              lcd_gotoxy(1,1);
+                                                               printf(lcd_putc, "welcome to : %1d place ", v);
+                                                               seg(v);
+                                                             vv=1;}
+                                                     if(vv==0){ lcd_putc('\f');
+                                                              lcd_gotoxy(1,1);
+                                                              lcd_putc( "wrong number try again ");}
+                                               
+                                               
+                                                    
+                                                    
+                                                    } } 
+                  
+                   if(!input(pin_c1)){
+                                 
+                                                              lcd_putc('\f');
+                                                              lcd_gotoxy(1,1);
+                                                              lcd_putc( "<<<EXIT>> ");
+                                                              lcd_gotoxy(1,2);
+                                                              lcd_putc( "enter your location ");
+                                                               int v=12;
+                                                               while(true){v=click();  if(v<10 && v>0)break;}
+                                                                 
+                                                                         if(z[v-1]==0){
+                                                                         lcd_putc('\f');
+                                                                         lcd_gotoxy(1,1);
+                                                                          lcd_putc( "wrong>>> try again");}
+                                                                         if(z[v-1]==1){
+                                                                                       z[v-1]=0;
+                                                                                       lcd_putc('\f');
+                                                                                       lcd_gotoxy(1,1);
+                                                                                       lcd_putc( "READY to EXIT>>>");
+                                                                                       delay_ms(200);
+                                                                                       motor();
+                                                                         
+                                                                               if(q[0]==1){ z[v-1]=1;
+                                                                                      for(int j=0; j<4; j++)q[j]=q[j+1]; q[4]=0; 
+                                                                                       lcd_putc('\f');
+                                                                                       lcd_gotoxy(1,1);
+                                                                                       lcd_putc( "queue >>>first one enter");
+                                                                                       delay_ms(200);
+                                                                                       motor();
+                                                                      
+                                                                                      
+                                                                                      }
+                                                                        
+                                                                          
+                                                                          }
+                                                                          
+                                                            
+                                      
+                   
+                   
+                   
+                   
+                   
+                   }
+      
+         
+                      
+  }
+}
+
+
+

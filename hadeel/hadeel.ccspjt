@@ -1,0 +1,123 @@
+[PROJECT]
+Target=ammar.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.049
+Compiler=PCM
+[Target Data]
+FileList=ammar.c
+[ammar.c]
+Type=4
+[mru-list]
+1=ammar.c
+
+[defines]
+buildcount=148
+
+[Opened Files]
+1=ammar.c
+t1=172
+Count=1
+2=SHT75.c
+t2=1
+3=..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+t3=66
+
+[ProjectLog]
+Days=6
+D1=14-12-2022
+D1_L=10
+D1_L1=[4090]Stopped Editing.
+D1_L2=[4380]Started Editing.
+D1_L3=[5213]Stopped Editing.
+TotalEdit=435
+TotalDebug=0
+D1_E=42
+D1_D=0
+D1_L4=[5213]Project Closed.
+D1_L5=[5610]Project Opened.
+D1_L6=[5619]Started Editing.
+D1_L7=[5970]Stopped Editing.
+D1_L8=[5970]Project Closed.
+D1_L9=[86121]Project Opened.
+D1_L10=[86239]Started Editing.
+D2=15-12-2022
+D2_L=9
+D2_L1=[966]Stopped Editing.
+D2_L2=[1077]Started Editing.
+D2_L3=[1626]Project Closed.
+D2_L4=[1631]Project Opened.
+D2_L5=[1684]Started Editing.
+D2_L6=[2783]Stopped Editing.
+D2_L7=[2898]Started Editing.
+D2_L8=[4124]Stopped Editing.
+D2_E=34
+D2_D=0
+D2_L9=[4124]Project Closed.
+D3=16-12-2022
+D3_L=24
+D3_L1=[66627]Project Opened.
+D3_L2=[66679]Started Editing.
+D3_L3=[67529]Stopped Editing.
+D3_L4=[67580]Started Editing.
+D3_L5=[68937]Stopped Editing.
+D3_E=88
+D3_D=0
+D3_L6=[70590]Project Closed.
+D3_L7=[71232]Project Opened.
+D3_L8=[71257]Started Editing.
+D3_L9=[71687]Stopped Editing.
+D3_L10=[72049]Started Editing.
+D3_L11=[73109]Stopped Editing.
+D3_L12=[73109]Project Closed.
+D3_L13=[73122]Project Opened.
+D3_L14=[73142]Started Editing.
+D3_L15=[73208]Stopped Editing.
+D3_L16=[73208]Project Closed.
+D3_L17=[73230]Project Opened.
+D3_L18=[73248]Project Closed.
+D3_L19=[73580]Project Opened.
+D3_L20=[73695]Started Editing.
+D3_L21=[74198]Stopped Editing.
+D3_L22=[77419]Started Editing.
+D3_L23=[79841]Stopped Editing.
+D3_L24=[81145]Project Closed.
+D4=17-12-2022
+D4_L=6
+D4_L1=[4890]Project Opened.
+D4_L2=[4912]Started Editing.
+D4_L3=[8486]Stopped Editing.
+D4_L4=[8527]Started Editing.
+D4_L5=[9561]Stopped Editing.
+D4_E=72
+D4_D=0
+D4_L6=[9561]Project Closed.
+D5=24-12-2022
+D5_L=2
+D5_L1=[24536]Project Opened.
+D5_L2=[24555]Project Closed.
+D6=27-12-2022
+D6_L=19
+D6_L1=[32736]Project Opened.
+D6_L2=[32740]Started Editing.
+D6_L3=[33369]Project Closed.
+D6_L4=[61193]Project Opened.
+D6_L5=[61225]Started Editing.
+D6_L6=[61884]Stopped Editing.
+D6_E=199
+D6_D=0
+D6_L7=[61884]Project Closed.
+D6_L8=[61894]Project Opened.
+D6_L9=[61946]Started Editing.
+D6_L10=[62075]Stopped Editing.
+D6_L11=[62075]Project Closed.
+D6_L12=[62144]Project Opened.
+D6_L13=[62160]Started Editing.
+D6_L14=[63052]Stopped Editing.
+D6_L15=[63140]Started Editing.
+D6_L16=[72828]Stopped Editing.
+D6_L17=[72878]Started Editing.
+D6_L18=[73965]Stopped Editing.
+D6_L19=[73965]Project Closed.
+[Units]
+Count=1
+1=ammar (main)

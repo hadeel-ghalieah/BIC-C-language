@@ -1,0 +1,98 @@
+
+ROM used:   3755/8192 (46%)
+            3855/8192 (47%) including unused fragments
+
+            2.4 Average locations per line
+            9.4 Average locations per statement
+
+RAM used:   40/368 (11%) at main() level
+            101/368 (27%) worst case
+
+Stack used: 7 worst case (6 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  196   190  47  ammar.c
+  674     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h
+  456   100  25  ..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+  229   111  28  SHT75.c
+----- -----
+ 1555   401 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20   1    1             @delay_ms1
+ Inline         3    760  4.5  lcd_read_byte
+0     57   2    2    262  3.7  lcd_read_nibble
+0     58   2    1    399  2.4  lcd_send_nibble
+0    140   4    3    415  3.7  lcd_send_byte
+0    104   3    6    852  6.2  lcd_init
+0     18   0    4    208  6.3  lcd_gotoxy
+0     44   1    1    354  4.7  lcd_putc
+0     58   2    0    380  1.9  comstart
+0     77   2    5    682  6.9  comwrite
+0    118   3    3   1280  6.6  comread
+0     39   1    2    225  5.0  comwait
+ Inline         1    290  3.7  comreset
+ Inline         4    172  3.1  measuretemp
+ Inline         4    172  3.1  measurehumid
+ Inline        28    386  5.1  calculate_data
+0     29   1    2             @ITOF
+0    147   4   13             @MULFF
+1    321   9   16             @ADDFF
+ Inline        16    228  3.0  sht_rd
+0     41   1    0     32  1.0  sht_init
+0     17   0    0     80  2.4  ext_isr
+0     98   3    0    869  2.9  press
+0    295   8    0   1436  6.8  adcr
+0      8   0    0             @const685
+0     87   2    5             @PSTRINGCN7_621
+0     99   3    9             @PRINTF_LU_621
+0      8   0    0             @const690
+0      8   0    0             @const691
+0      8   0    0             @const692
+0      5   0    0             @const693
+0     86   2    4             @PSTRINGC7_621
+0      6   0    0             @const698
+0      5   0    0             @const699
+1   1044  28   17   3365  6.4  MAIN
+0      4   0    0             @const707
+0      4   0    0             @const708
+0      4   0    0             @const709
+0      4   0    0             @const710
+0     63   2   10             @FLT
+0     10   0    0             @const714
+ Inline         5             @FTOSD
+0     79   2   13             @DIV3232
+1    238   6   13             @PRINTF_L32D_621FPFPF
+0      5   0    0             @const723
+1    204   5   14             @DIVFF
+0      3   0    0             @const727
+0      3   0    0             @const728
+0     10   0    0             @const729
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               21
+    Statements              401
+    Comments                297
+    Volume (V)              21032
+    Difficulty (D)          87.1
+    Effort to implement (E) 1831093
+    Time to implement (T)   28 hours, 15 minutes
+    Est Delivered Bugs (B)  5
+    Cyclomatic Complexity   54
+    Maintainability (MI)    65
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-0004E    75  0  
+0004F-007FF  1869  100  
+00800-00FFF  1807  241  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+
